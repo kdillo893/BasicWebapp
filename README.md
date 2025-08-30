@@ -1,22 +1,32 @@
-# [Basic CRUD application](#basic-crud-application)
-Creating a small application that includes a database connection, object structures, some API, and some front-end structure.
+# Software Stack Testing
+I want to become familiar with at least the basics of some popular software stacks. My prior experience contains bits and
+pieces which could be applicable to varied applications, but I would prefer to cover the whole field.
+
+Creating a small application that includes a database connection,
+object structures, some API, and some front-end structure.
+
+Basics of the stacks I want to cover:
+* Front-end focused stacks (MERN, LAMP),
+* Back-end focused stacks (Java Spring, Python/Django, .NET w/ C#)
+* Mobile (React Native, Android with Java)
+* Cloud or distributed (Kubernetes, Docker, etc)
+
+## [Java/Jakarta EE](#java-ee)
+Java, TomCat/Glassfish, JPA/Hibernate/Custom, MySQL, frontend (React, JSPs, etc)
 
 
 > [!WARNING]
-> I was making the setup way too complicated and using a bunch of
-different tools and dependencies. I want to rework this to be much simpler to set up.
-Setting up your own postgres DB from scratch is a pain, and there are tools to
-do that or public containers via docker to make the process easier. Another thing
-would be to have a bash script that does all the granular setup so that others who
-try to redo this repo won't get frustrated and give up (like me in the future).
-I REALLY SHOULD HAVE JUST DONE MY OWN SERVER THINGS! SERVLETS ARE WEIRD, AND SO IS ENTERPRISE STUFF!
+> I was making the setup way too complicated and using a bunch of.
+I want to rework this to be much simpler to set up.
 
 ## [Prerequisites](#prerequisites)
 
 * Database -- using PostgreSQL. Create a "webapp" schema.
    * Follow setup in other PSQL_README.md or do it yourself
-   * Ensure the database is running, create a schema for it with ``./src/main/db/initdb.sql``
-   * Add a config file at ``./src/main/resources/config.properties`` with the following, change depending on your DB setup from prior steps:
+   * Ensure the database is running, create a schema for it with
+        ``./src/main/db/initdb.sql``
+   * Add a config file at ``./src/main/resources/config.properties``
+        with the following, change depending on your DB setup from prior steps:
       ```env title="config.properties"
       db.name=garbage
       db.schema=webapp
@@ -196,5 +206,6 @@ In order to run the application, follow the above steps for adding the required 
 ```
 java com.kdillo.simple.SimpleApp
 ```
+
 
 

@@ -16,11 +16,18 @@ https://www.postgresql.org/download/
 Some arch instructions here: https://wiki.archlinux.org/title/PostgreSQL
 
 1. Download and install from the latest. 
-2. Initialize your data directory in the desired location. Default is ```/var/lib/postgres/data```. This is done with running ``initdb`` under the postgres user.
-   1. Ensure you have a postgres user and group defined. Then execute
-      ```initdb -D '/your/data/directory/here]'```
+2. Initialize your data directory in the desired location. Default is 
+``/var/lib/postgres/data``. This is done with running ``initdb`` under the 
+postgres user.
+   1. Ensure you have a postgres user and group defined.
+    Switch to postgres user and group, then execute:
+      ```
+      initdb -D '/your/data/directory/here'
+      ```
+   1. Use pg_ctl to start things simply. Can use the service instructions below
+   if you want systemd to automatically start the server without needing to run manually.
    1. If you want your data directory somewhere else, the service file for postgresql needs to reflect that directory. An example is ``/home/postgres/data``, below would need to change
-      * ```
+      ```
       Environment=PGDATA=/home/postgres/data
       \[...\]
       ExecStartPre=/usr/bin/postgresql-check-db-dir ${PGDATA}
