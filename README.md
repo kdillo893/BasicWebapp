@@ -13,6 +13,7 @@ Basics of the stacks I want to cover:
 
 ## [Java/Jakarta EE](#java-ee)
 Java, TomCat/Glassfish, JPA/Hibernate/Custom, MySQL, frontend (React, JSPs, etc)
+
 [Readme for that](./javaCustom/README.md)
 
 ## ... more coming soon
